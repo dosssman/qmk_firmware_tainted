@@ -24,7 +24,8 @@
     { F6, F5, B6, D7, E6, B4 }
 
 /* Handedness. */
-#define MASTER_RIGHT
+// #define MASTER_RIGHT
+#define EE_HANDS
 
 /* serial.c configuration (for split keyboard). */
 #define SOFT_SERIAL_PIN D2

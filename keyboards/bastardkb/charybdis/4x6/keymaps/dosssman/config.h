@@ -29,13 +29,21 @@
 #    define RGB_MATRIX_STARTUP_MODE RGB_MATRIX_CYCLE_LEFT_RIGHT
 
 // Slow swirl at startup.
-#    define RGB_MATRIX_STARTUP_SPD 32
+#    define RGB_MATRIX_STARTUP_SPD 64 // Default: 32
 
 // Startup values.
 #    define RGB_MATRIX_STARTUP_HUE 0
 #    define RGB_MATRIX_STARTUP_SAT 255
 #    define RGB_MATRIX_STARTUP_VAL RGB_MATRIX_MAXIMUM_BRIGHTNESS
 #    define RGB_MATRIX_STARTUP_HSV RGB_MATRIX_STARTUP_HUE, RGB_MATRIX_STARTUP_SAT, RGB_MATRIX_STARTUP_VAL
+
+// Additional RGB profiles
+#    define ENABLE_RGB_MATRIX_BREATHING
+#    define ENABLE_RGB_MATRIX_BAND_VAL
+#    define ENABLE_RGB_MATRIX_BAND_SPIRAL_SAT
+// Typing related RGB matrix setings
+#    define ENABLE_RGB_MATRIX_SPLASH
+#    define ENABLE_RGB_MATRIX_SOLID_SPLASH
 #endif  // RGB_MATRIX_ENABLE
 
 /* Trackball angle adjustment override. */

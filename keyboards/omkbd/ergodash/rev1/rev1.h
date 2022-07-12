@@ -137,13 +137,3 @@
     { R40, R41, R42, R43, R44, R45, R46 } \
 }
 #endif
-
-// Support for drag scroll
-enum custom_keycodes {
-    DRAG_SCROLL = SAFE_RANGE,
-};
-
-report_mouse_t pointing_device_task_user(report_mouse_t mouse_report);
-bool process_record_user(uint16_t keycode, keyrecord_t *record);
-
-#define DRG_SCROLL DRAG_SCROLL

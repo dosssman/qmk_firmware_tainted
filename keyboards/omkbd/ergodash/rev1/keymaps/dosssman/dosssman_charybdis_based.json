@@ -112,7 +112,7 @@
       "KC_LEFT",
       "KC_DOWN",
       "KC_RGHT",
-      "KC_NO",
+      "ANY(DRG_SCROLL)",
       "KC_WH_D",
       "KC_WH_D",
       "KC_LEFT",

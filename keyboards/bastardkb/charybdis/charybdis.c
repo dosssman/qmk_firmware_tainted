@@ -176,6 +176,7 @@ void charybdis_set_pointer_dragscroll_enabled(bool enable) {
 
 void pointing_device_init_kb(void) {
     maybe_update_pointing_device_cpi(&g_charybdis_config);
+    pointing_device_init_user();
 }
 
 /**
@@ -315,8 +316,14 @@ bool process_record_kb(uint16_t keycode, keyrecord_t* record) {
         pointing_device_send();
     }
 #        endif // !MOUSEKEY_ENABLE
+    if (IS_MOUSEKEY(keycode)
+#        ifndef NO_CHARYBDIS_KEYCODES
+        || (keycode >= POINTER_DEFAULT_DPI_FORWARD && keycode < CHARYBDIS_SAFE_RANGE)
+#        endif
+        ) {
+        debug_charybdis_config_to_console(&g_charybdis_config);
+    }
 #    endif     // POINTING_DEVICE_ENABLE
-    debug_charybdis_config_to_console(&g_charybdis_config);
     return true;
 }
 
